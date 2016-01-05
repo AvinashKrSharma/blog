@@ -5,9 +5,9 @@ category: vim
 
 Hey future vimmers, Hope you are doing great. Here, I am going to share my experience about working with [Vim(the text editor)](http://www.vim.org/). Before getting started, here is some background. 
 
-I am a front end web developer using Vim full-time for more than 4 months and believe me, since then I never had the need to open another text editor or IDE. FYI, I used to use Jetbrains Webstorm earlier. I am pretty sure this is a solid enough point for you to get motivated to invest time in Vim. Ok, now lets start.
+I am a front end web developer using Vim full-time for more than 4 months and believe me, since then I never had the need to open another text editor or IDE. FYI, I used to use Jetbrains Webstorm earlier. I am pretty sure this is a solid enough point for you to get motivated to invest your time learning Vim. Ok, now lets start.
 
-I think the best way to learn vim (without quitting in the middle) is to get to a basic productive level in vim in the very beginning. Most of the devs eventually quit vim because they fail to be productive in vim during their initial learning period. So please give it a weekend to get productive before using it full-time otherwise you will most probably quit.
+I think the best way to learn vim (without quitting in the middle) is to get to a basic productive level with vim in the very beginning. Most of the devs eventually quit vim because they fail to be productive in vim during their initial learning period. So please give it a weekend to get productive before using it full-time otherwise you will most probably quit.
 
 ## Installation
 First of all, install vim (I am not going to explain this, you can easily get the instructions online). Open a terminal and open vim.
