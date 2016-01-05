@@ -35,10 +35,10 @@ sidebar:
             title: global.home
             url: /
             icon: home
-        # categories:
-        #     title: global.categories
-        #     url: /all-categories
-        #     icon: bookmark
+        categories:
+            title: global.categories
+            url: /all-categories
+            icon: bookmark
         # tags:
         #     title: global.tags
         #     url: /all-tags
