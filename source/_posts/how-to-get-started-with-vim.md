@@ -43,7 +43,7 @@ As mentioned earlier, this is the default mode. Vim opens up in this mode. Here,
 This is the mode in which you actually write something to file(buffer actually).
 
 ### Command mode
-You can enter this mode after pressing `:`(colon) in the Normal mode. This mode is used for operations like writing(saving) the file, quiting vim etc.
+You can enter this mode after pressing `:`(colon) in the Normal mode. This mode is used for operations like writing(saving) the file, quitting vim etc.
 
 As I mentioned earlier, you will spend most of the time in Normal mode. So lets get familiar with some basics regarding Normal mode.
 
@@ -69,7 +69,7 @@ Note: you need to press Enter(Carriage) after any command in command mode(basica
 Pressing `/` in normal mode followed by a string will search the string in the current line. 
 
 ## Replace
-To replace something, use `:%s/patterntobereplaced/resultingpattern/g`. This will replace the occurence of 'patterntobereplaced' be 'resultingpattern'. You can replace the last portion in the above command with `/gc` to ask for confirmation before replacing.
+To replace something, use `:%s/patterntobereplaced/resultingpattern/g`. This will replace the occurrence of 'patterntobereplaced' be 'resultingpattern'. You can replace the last portion in the above command with `/gc` to ask for confirmation before replacing.
 
 ## Editing
 ### Undo
@@ -157,6 +157,6 @@ I created 3 mappings here.
 I am going to explain mappings in detail in the upcoming post. For now just use them. Although if you are curious, you can always look up and learn more about them.
 
 ## Summary
-I hope you will feel better using vim now. Mind it, this is a very beginner level post so that no beginner feels overwhelmed at the first day and still finds vim easier to use to some extent. I strongly recommend you to go through vimtutor earlier mentioned in this post. That covers the basics very well.
+I hope you will feel better using vim now. Mind it, this is a very beginner level post so that no beginner feels overwhelmed on the first day and still finds vim easier to use to some extent. I strongly recommend you to go through vimtutor earlier mentioned in this post. That covers the basics very well.
 
 In the next post I will mention some more important settings and plugins, how to make custom key maps, and much more. Stay tuned.
