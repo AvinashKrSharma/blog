@@ -186,15 +186,15 @@
             <div class="postShorten-header">
                 <h1 class="postShorten-title" itemprop="headline">
                     
-                        <a class="link-unstyled" href="/2016/01/17/how-to-get-started-with-vim/">
+                        <a class="link-unstyled" href="/2016/02/02/how-to-get-started-with-vim/">
                             How to get started with Vim
                         </a>
                     
                 </h1>
                 <div class="postShorten-meta">
-    <time itemprop="datePublished" content="Sun Jan 17 2016 20:53:27 GMT+0530">
+    <time itemprop="datePublished" content="Tue Feb 02 2016 15:50:27 GMT+0530">
 	
-		    Jan 17, 2016
+		    Feb 02, 2016
     	
     </time>
     
@@ -213,9 +213,8 @@
 <p>I am a front end web developer using Vim full-time for more than 5 months and believe me, since then I never had the need to open another text editor or IDE. FYI, I used to use Jetbrains Webstorm earlier. I am pretty sure this is a solid enough point for you to get motivated to invest your time learning Vim. Ok, now lets start. P.S. I am writing this also on Vim :D .</p>
 <p>I think the best way to learn vim (without quitting in the middle) is to get to a basic productive level with vim in the very beginning. Most of the devs eventually quit vim because they fail to be productive in vim during their initial learning period. So please give it a weekend to get productive before using it full-time otherwise you will most probably quit.</p>
 <p>In this and the next few posts, I will make you familiar with the basics needed to get work done in vim. Mind it, this one is for absolute beginners. If you are not a beginner, please skip this post. But later, I am going to cover more advanced topics. So stay tuned for that.</p>
-<h2 id="What_is_a_buffer_3F"><a href="#What_is_a_buffer_3F" class="headerlink" title="What is a buffer?"></a>What is a buffer?</h2><p>In vim, when you open a file, that file is opened in the memory in a buffer. The changes you made are written to buffer, not to the file until you write the buffer to file using <code>:w</code> , <code>:update</code> etc. So, do not get confused when I use the term “buffer”. It essentially means file (although it isn’t file actually).</p>
 <h2 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h2><p>First of all, install vim (I am not going to explain this, you can easily get the instructions online). Open a terminal and open vim.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vim</span><br></pre></td></tr></table></figure></p>
-<p>You should see something like this:<br><img src="/2016/01/17/how-to-get-started-with-vim/initial-screen.png" alt="Plain Vim's Initial Screen" title="Plain Vim's Initial Screen"></p>
+<p>You should see something like this:<br><img src="/2016/02/02/how-to-get-started-with-vim/initial-screen.png" alt="Plain Vim's Initial Screen" title="Plain Vim's Initial Screen"></p>
 <p>Cool. Now this is the NORMAL mode. It’s called the normal mode because this is the mode you will spend most of your time in. In this mode, almost every key on the keyboard is a command. So be careful with your fingers. Now there are many modes. But to start with, you need to know only three modes:</p>
 <ul>
 <li>Normal</li>
@@ -224,11 +223,12 @@
 </ul>
 <p>Now before continuing, I will strongly recommend you to go through vimtutor. It’s the built in tutorial(actually it’s just a text file) in vim that will explain you many of the basics needed to get started with vim. To open vimtutor, open a terminal and type<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vimtutor</span><br></pre></td></tr></table></figure></p>
 <p>But for completeness, I am going to cover some of the most important stuff here(also present in the vimtutor). Ok, let’s continue now.</p>
-<h3 id="Normal_mode"><a href="#Normal_mode" class="headerlink" title="Normal mode"></a>Normal mode</h3><p>As mentioned earlier, this is the default mode. Vim opens up in this mode. Here, every key is a command.</p>
-<h3 id="Insert_mode"><a href="#Insert_mode" class="headerlink" title="Insert mode"></a>Insert mode</h3><p>This is the mode in which you actually write something to file(buffer actually).</p>
-<h3 id="Command_mode"><a href="#Command_mode" class="headerlink" title="Command mode"></a>Command mode</h3><p>You can enter this mode after pressing <code>:</code>(colon) in the Normal mode. This mode is used for operations like writing(saving) the file, quiting vim etc.</p>
-<p>As I mentioned earlier, you will spend most of the time in Normal mode. So lets get familiar with some basics regarding Normal mode.</p>
-<h2 id="Movement"><a href="#Movement" class="headerlink" title="Movement"></a>Movement</h2><img src="/2016/01/17/how-to-get-started-with-vim/hjkl.png" alt="Plain The movement keys" title="Plain The movement keys">
+<h2 id="What_is_a_buffer_3F"><a href="#What_is_a_buffer_3F" class="headerlink" title="What is a buffer?"></a>What is a buffer?</h2><p>Everything in Vim happens in buffers. When you open a file, the file is opened in the memory in what is called a buffer. The changes you made are written to buffer, not to the file until you write the buffer to file using <code>:w</code> , <code>:update</code> etc. So, do not get confused when I use the term “buffer”. It essentially means file (although it isn’t file actually). Next are the modes.</p>
+<h3 id="Normal_mode"><a href="#Normal_mode" class="headerlink" title="Normal mode"></a>Normal mode</h3><p>As mentioned earlier, this is the default mode. Vim opens up in this mode. Here, every key is a command. By default you are in Normal mode, but if you entered some other mode, then you can hit Escape key to return to the normal mode. Every command or mapping mentioned below will work in the normal mode only(for now atleast).</p>
+<h3 id="Insert_mode"><a href="#Insert_mode" class="headerlink" title="Insert mode"></a>Insert mode</h3><p>This is the mode in which you actually write something to file(buffer actually). To enter insert mode, press ‘i’. After entering the insert mode, all your keystrokes are written to the buffer similar to any other text editor. There are other ways to end up at specific positions in the line via a single keystroke, but for now try getting accustomed to the ‘i’ key.</p>
+<h3 id="Command_mode"><a href="#Command_mode" class="headerlink" title="Command mode"></a>Command mode</h3><p>You can enter this mode after pressing <code>:</code>(colon) in the Normal mode. This mode is used for operations like writing(saving) the file, quitting vim etc. For example, when you want to quit vim, you (being already in the normal mode) hit <code>:</code> (colon) and then type q and press Enter.</p>
+<p>As I mentioned earlier, you will spend most of the time in Normal mode. So lets get familiar with some basics regarding Normal mode. All these commands/mappings are to be used in the Normal mode.</p>
+<h2 id="Movement"><a href="#Movement" class="headerlink" title="Movement"></a>Movement</h2><img src="/2016/02/02/how-to-get-started-with-vim/hjkl.png" alt="Plain The movement keys" title="Plain The movement keys">
 <ul>
 <li><p>The very basic about normal mode is how you move through text. The image above shows the left,down,up,bottom movement keys for the normal mode. You can also use the regular arrow keys(but they might not function correctly in some cases), because you need to be productive working inside vim from the very beginning.</p>
 </li>
@@ -246,7 +246,7 @@
 </ul>
 <p>Note: you need to press Enter(Carriage) after any command in command mode(basically any command that prepends with a <code>:</code>(colon)</p>
 <h2 id="Search"><a href="#Search" class="headerlink" title="Search"></a>Search</h2><p>Pressing <code>/</code> in normal mode followed by a string will search the string in the current line. </p>
-<h2 id="Replace"><a href="#Replace" class="headerlink" title="Replace"></a>Replace</h2><p>To replace something, use <code>:%s/patterntobereplaced/resultingpattern/g</code>. This will replace the occurence of ‘patterntobereplaced’ be ‘resultingpattern’. You can replace the last portion in the above command with <code>/gc</code> to ask for confirmation before replacing.</p>
+<h2 id="Replace"><a href="#Replace" class="headerlink" title="Replace"></a>Replace</h2><p>To replace something, use <code>:%s/patterntobereplaced/resultingpattern/g</code>. This will replace the occurrence of ‘patterntobereplaced’ be ‘resultingpattern’. You can replace the last portion in the above command with <code>/gc</code> to ask for confirmation before replacing.</p>
 <h2 id="Editing"><a href="#Editing" class="headerlink" title="Editing"></a>Editing</h2><h3 id="Undo"><a href="#Undo" class="headerlink" title="Undo"></a>Undo</h3><p>To undo any change you made, press <code>u</code> in normal mode. </p>
 <h3 id="Redo"><a href="#Redo" class="headerlink" title="Redo"></a>Redo</h3><p>To redo any change you made, press <code>Ctrl + r</code> in normal mode. </p>
 <h3 id="Delete_a_line"><a href="#Delete_a_line" class="headerlink" title="Delete a line"></a>Delete a line</h3><p>To delete a line, press <code>dd</code>. To delete a line and start typing, press <code>cc</code>.</p>
@@ -291,7 +291,7 @@
 </li>
 <li><p>The next three lines are for showing available commands when you are in command mode and hit tab while typing a command.</p>
 </li>
-<li><p><code>let mapleader=&quot;\&lt;Space&gt;&quot;</code>: sets a leader key. Leader key is a user set key that can be used to create custom key mappings for various vim commands and actions.</p>
+<li><p><code>let mapleader=&quot;\&lt;Space&gt;&quot;</code>: sets a leader key. Leader key is a user set key that can be used to create custom key mappings for various vim commands and actions. For easy access, I have set it to Space key. To use the leader key mappings, press the Space and then release it and then press the another key as given below. What I mean by this is that these mappings are not like the generally used Ctrl key mappings where you press two or more key simultaneously. You don’t need to press for example, <code>c</code> while holding <code>Space</code>.</p>
 </li>
 </ul>
 <h3 id="Plugins"><a href="#Plugins" class="headerlink" title="Plugins"></a>Plugins</h3><p>The following two lines are required by Vundle:<br><code>set rtp+=~/.vim/bundle/vundle/</code><br><code>call vundle#begin()</code></p>
@@ -302,9 +302,9 @@
 </li>
 <li><p><strong>CtrlP</strong>: The fuzzy file finder. To use it, you need to press <ctrl+p>(the default key mapping).</ctrl+p></p>
 </li>
-<li><p><strong>Airline</strong>: The very useful and beautiful status line at the bottom.</p>
+<li><p><strong>Airline</strong>: The very useful and beautiful status line at the bottom. This will show you the current mode you are in and lots of other useful information. We will customize the airline later. For now just try out the default one.</p>
 </li>
-<li><p><strong>TComment</strong>: To comment any line in you code with just a key binding(Ctrl+_ Ctrl+_).</p>
+<li><p><strong>TComment</strong>: This plugin helps to comment code in numerous languages so that you don’t have to do it manually.</p>
 </li>
 </ul>
 <h3 id="Mappings"><a href="#Mappings" class="headerlink" title="Mappings"></a>Mappings</h3><p>I created 3 mappings here.</p>
@@ -317,8 +317,9 @@
 </li>
 </ul>
 <p>I am going to explain mappings in detail in the upcoming post. For now just use them. Although if you are curious, you can always look up and learn more about them.</p>
-<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>I hope you will feel better using vim now. Mind it, this is a very beginner level post so that no beginner feels overwhelmed at the first day and still finds vim easier to use to some extent. I strongly recommend you to go through vimtutor earlier mentioned in this post. That covers the basics very well.</p>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>I hope you will feel better using vim now. Mind it, this is a very beginner level post so that no beginner feels overwhelmed on the first day and still finds vim easier to use to some extent. I strongly recommend you to go through vimtutor earlier mentioned in this post. That covers the basics very well.</p>
 <p>In the next post I will mention some more important settings and plugins, how to make custom key maps, and much more. Stay tuned.</p>
+<p>For any queries, you can comment below or reach me at my mail id <code>me@avinashkrsharma.com</code>.</p>
 
                     
                         
@@ -326,7 +327,7 @@
                     
                     
                         <p>
-                            <a href="/2016/01/17/how-to-get-started-with-vim/#post-footer" class="postShorten-excerpt_link link">
+                            <a href="/2016/02/02/how-to-get-started-with-vim/#post-footer" class="postShorten-excerpt_link link">
                                 Comment and share
                             </a>
                         </p>
